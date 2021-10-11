@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="signUpCard">
+        <div class="imgDiv">
+            <img src="/bg.png" alt="">
+        </div>
+        <div class="signUpForm">
+            <h1 class="signTitle">Sign In</h1>
+            <form action="">
+                <div class="form__div">
+                    <input class="form__input" type="email" name="email" required>
+                    <div class="underline"></div>
+                    <label class="form__label">Email</label>
+                </div>
+                <div class="form__div">
+                    <input class="form__input" type="password" name="password" required>
+                    <div class="underline"></div>
+                    <label class="form__label">Password</label>
+                </div>
+                <button class="btn-filled form__signInBtn">SIGN IN</button>
+            </form>
+            <p class="option">Don't have an account?</p>
+            <a href="#" class="linkToSign">Create your account</a>
+        </div>
+    </div>
+    
+</body>
+</html>

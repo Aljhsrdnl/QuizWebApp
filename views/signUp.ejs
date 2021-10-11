@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="signUpCard">
+        <div class="imgDiv">
+            <img src="/bg.png" alt="">
+        </div>
+        <div class="signUpForm">
+            <h1 class="signTitle">Sign Up</h1>
+            <form action="">
+                <div class="form__div">
+                    <input type="text" name="" class="form__input" required>
+                    <div class="underline"></div>
+                    <label for="" class="form__label">Name</label>
+                </div>
+                <div class="form__div">
+                    <input type="email" name="" class="form__input" required>
+                    <div class="underline"></div>
+                    <label for="" class="form__label">Email</label>
+                </div>
+                <div class="form__div">
+                    <input type="password" name="" class="form__input" required>
+                    <div class="underline"></div>
+                    <label for="" class="form__label">Password</label>
+                </div>
+                <button class="btn-filled form__signInBtn">SIGN UP</button>
+            </form>
+            <p class="option">Already have an account?</p>
+            <a href="#" class="linkToSign">Sign in</a>
+        </div>
+    </div>
+    
+</body>
+</html>

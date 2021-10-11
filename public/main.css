@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+:root {
+    --primary: #ffb524;
+    --accent: #f0aa20;
+    --secondary: #f2eee6;
+    --error: #ea1601;
+    --success: #64bc46;
+    --text: #2b1f06;
+    --gray: rgb(180, 180, 180);
+    --gray-darker: rgb(155, 155, 155);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1.2em 2em;
+}
+
+.logo {
+    flex-grow: 1;
+    font-size: 2em;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.btn-filled {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 7px;
+    padding: 0.5em 1em;
+    transition: background-color border-color 0.4s ease;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-filled:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-outlined {
+    border: 2px solid var(--primary);
+    border-radius: 7px;
+    padding: 0.5em 1em;
+    margin: 0 0.6em;
+    font-size: 1em;
+    transition: background-color color 0.4s ease;
+}
+
+.btn-outlined:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.navSignIn_Btn {
+    margin: 0 0.6em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navSignUp_Btn {
+    margin: 0 0.6em;
+    color: var(--text);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*====================================index*/
+.indexDiv {
+    padding: 2em;
+}
+
+.tag {
+    text-align: center;
+    color: var(--text);
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.subTag {
+    color: var(--text);
+    text-align: center;
+    margin: 0 0 2em 0;
+
+}
+
+.getStartedBtn {
+    display: block;
+    width: 8em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*========================Sign In====*/
+.signUpCard {
+    background: white;
+    border-radius: 13px;
+    margin: 3em;
+    box-shadow: 0 5px 10px 0 #cccccc;
+}
+
+.signUpForm {
+    padding: 2em;
+}
+
+.signTitle {
+    font-size: 2.2em;
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.form__div {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.form__input {
+    height: 100%;
+    width: 99%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 1px solid var(--gray);
+    outline:none;
+    color: var(--text);
+}
+
+.form__label {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    color: var(--gray);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+
+.form__input:focus ~ .form__label,
+.form__input:valid ~ .form__label {
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: var(--primary);
+}
+
+.underline {
+    position: absolute;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+}
+
+.form__div:hover ~ form__input{
+    border-color: var(--gray-darker);
+}
+
+.form__div .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.form__div .form__input:focus ~ .underline:before,
+.form__div .form__input:focus ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.option {
+    font-size: 14px;
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+.form__signInBtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.linkToSign {
+    color: var(--primary);
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.linkToSign:hover {
+    color: var(--accent);
+}
+
+.imgDiv {
+    background-color: var(--primary);
+    display: none;
+}
+
+/*============================MEDIA QUERIES===================*/
+@media (min-width: 600px) { /*tablets*/
+    .signUpCard {
+        display: block;
+        margin: 30px auto;
+        width: 60%;
+    }
+}
+
+@media (min-width: 900px) { /*tablet wide*/
+    /*signup*/
+    .signUpCard {
+        display: flex;
+        width: 80%;
+    }
+
+    .signUpForm {
+        width: 50%;
+    }
+
+    .imgDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        border-top-left-radius: 13px;
+        border-bottom-left-radius: 13px;
+    }
+
+    .imgDiv img {
+        width: 80%;
+        height: 80%;
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 1200px) { /*Laptop*/
+    .signUpCard {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1500px) { /*Laptop*/
+
+}
